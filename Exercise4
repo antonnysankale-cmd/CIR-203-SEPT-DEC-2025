@@ -1,0 +1,55 @@
+
+---
+
+1. Create a dictionary with 5 products and their stock quantities (4 marks)
+
+stock = {
+    "Sugar": 15,
+    "Flour": 8,
+    "Rice": 20,
+    "Milk": 6,
+    "Bread": 12
+}
+stock
+
+
+---
+
+2. Add a new product and update the quantity of an existing one (4 marks)
+
+Add "Salt": 18 and update "Milk" to quantity 10.
+
+stock["Salt"] = 18        # adding new product
+stock["Milk"] = 10        # updating existing product
+stock
+
+
+---
+
+3. Write a function to return products with stock less than 10 (4 marks)
+
+def low_stock_items(stock_dict):
+    return [product for product, qty in stock_dict.items() if qty < 10]
+
+low_stock_items(stock)
+
+
+---
+
+4. Delete a discontinued product and display updated dictionary (4 marks)
+
+Let’s remove "Bread".
+
+del stock["Bread"]
+stock
+
+
+---
+
+5. Use .items() to loop and print each product with its quantity (4 marks)
+
+for product, qty in stock.items():
+    print(product, ":", qty)
+
+
+---.
