@@ -1,0 +1,68 @@
+---
+
+1. Create a tuple for a patient (4 marks)
+
+Tuple format: (Name, Age, Blood Pressure, Heart Rate)
+
+patient = ("John Doe", 45, "120/80", 76)
+patient
+
+
+---
+
+2. Access and print the patient’s age and heart rate (4 marks)
+
+age = patient[1]
+heart_rate = patient[3]
+
+print("Age:", age)
+print("Heart Rate:", heart_rate)
+
+
+---
+
+3. Why tuples are suitable for storing patient vitals? (4 marks)
+
+Tuples are suitable because:
+
+They are immutable, meaning the data cannot be accidentally changed.
+
+This protects critical health information from unintentional modification.
+
+They keep related data together in a fixed, structured format.
+
+Faster to access compared to lists because of immutability.
+
+
+Therefore, tuples are ideal for storing fixed records like patient vitals.
+
+
+---
+
+4. Convert tuple to list, update heart rate, convert back to tuple (4 marks)
+
+patient_list = list(patient)
+patient_list[3] = 80     # updating heart rate
+patient = tuple(patient_list)
+
+patient
+
+
+---
+
+5. Create a tuple of 5 patients and extract all names (4 marks)
+
+patients = (
+    ("John Doe", 45, "120/80", 76),
+    ("Mary Anne", 39, "118/77", 82),
+    ("Kevin Otieno", 50, "130/85", 70),
+    ("Sarah Kim", 29, "115/75", 78),
+    ("Brian Kip", 60, "140/90", 72)
+)
+
+# Extracting all names
+names = [p[0] for p in patients]
+names
+
+
+---.
