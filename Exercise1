@@ -1,0 +1,61 @@
+1. Create a 2D NumPy array (4 branches × 6 months)
+
+Example transaction volumes:
+
+import numpy as np
+
+# 4 branches, 6 months
+transactions = np.array([
+    [1200, 1500, 1600, 1700, 1800, 1900],   # Branch 1
+    [1100, 1400, 1550, 1650, 1750, 1850],   # Branch 2
+    [1300, 1600, 1700, 1800, 1950, 2000],   # Branch 3
+    [1000, 1200, 1300, 1400, 1500, 1600]    # Branch 4
+])
+
+transactions
+
+
+---
+
+2. Total transactions per branch
+
+total_per_branch = transactions.sum(axis=1)
+total_per_branch
+
+
+---
+
+3. Identify the branch with the highest total transactions
+
+highest_branch = np.argmax(total_per_branch) + 1   # +1 to match human branch numbering
+highest_branch
+
+
+---
+
+4. Average monthly transaction volume across all branches
+
+average_monthly = transactions.mean()
+average_monthly
+
+
+---
+
+5. Reshape the array to 3 × 8 and explain the implications
+
+reshaped = transactions.reshape(3, 8)
+reshaped
+
+Implication of reshaping:
+
+Reshaping changes only how the data is arranged, not the data itself.
+
+The original 4×6 matrix = 24 elements.
+
+A 3×8 matrix also = 24 elements, so reshaping is allowed.
+
+
+
+
+
+---
