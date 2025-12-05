@@ -1,0 +1,23 @@
+def create_node(data):
+    return {
+        "data": data,
+        "next": None
+    }
+
+node1 = create_node(10)
+node2 = create_node(20)
+node3 = create_node(30)
+
+node1["next"] = node2
+node2["next"] = node3
+
+head = node1
+
+current = head
+
+print("Linked List:")
+while current is not None:
+    print(current["data"], end=" -> ")
+    current = current["next"]
+
+print("None")
